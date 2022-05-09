@@ -1,0 +1,88 @@
+// offres-performance
+.site-offersAll-bg {
+  @include full-width;
+  background: $snow-dark;
+  //garantie-contact
+  .garantie-contact {
+    background: none;
+  }
+
+  .contact-background {
+    background: none;
+  }
+
+  //thumbnail
+  .thumbnail {
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    @include box-shadow(0 0 20px rgba(0, 0, 0, 0.15));
+    padding: 0;
+    margin-bottom: 52px;
+    &:hover{
+      .page-banner:after{
+        height: 100%;
+      }
+    }
+
+    .caption {
+      padding: 31px 57px 36px;
+      min-height: 155px;
+      @include mq(max, 991) {
+        padding: 31px 30px 36px;
+      }
+      @include mq(max, 479) {
+        padding: 31px 15px 36px;
+      }
+
+      h3 {
+        font-size: 24px;
+        @include cabin(bold);
+        font-style: italic;
+        color: $navy-color;
+        margin-top: 0;
+        letter-spacing: 0.5px;
+      }
+
+    }
+
+    // page-banner
+    .page-banner {
+      padding-top: 57%;
+      border-radius: 0;
+      float: none;
+      background-color: transparent;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        background-color: #ffff46;
+        width: 100%;
+        height: 0%;
+        opacity: 0.5;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -ms-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        border-radius: inherit;
+
+      }
+    }
+  }
+
+  //offer-expertise
+  .offer-expertise {
+    margin-bottom: 30px;
+  }
+
+  //offres-performance
+  .offres-performance {
+    @include full-width;
+    padding-bottom: 40px;
+  }
+}

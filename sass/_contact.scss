@@ -1,0 +1,231 @@
+//garantie-contact
+.garantie-contact {
+  background-color: $drkyello-bg;
+  @include full-width;
+  padding: 56px 0;
+  // garantie-section
+  .garantie-section h2{
+    margin-top: 5px;
+  }
+}
+
+// garantie-section, sm-heading
+.garantie-section span, .sm-heading{
+  font-size: 16px;
+  @include cabin(bold);
+  font-style: italic;
+  color: $navy-color;
+  display: block;
+}
+
+//garantie-section
+.garantie-section {
+  h2 {
+    font-size: 37.6px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: $blueclr;
+    margin-top: 0;
+    margin-bottom: 2px;
+    letter-spacing: 1.2px;
+    @include cabin(bold);
+    font-style: italic;
+    text-transform: uppercase;
+    @include custom-max(991) {
+      font-size: 33px;
+    }
+    @include custom-max(767) {
+      font-size: 26px;
+    }
+    @include custom-max(479) {
+      font-size: 22px;
+    }
+  }
+
+  //title-borderbottom
+  .title-borderbottom {
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+    display: inline-block;
+    background-color: $navy-color;
+  }
+}
+
+// garantie-section
+.garantie-section {
+  width: 100%;
+  float: left;
+}
+
+//contact-background
+.contact-background {
+  background-color: $blueclr;
+  @include full-width;
+  padding: 52px 0;
+  //contact-form
+  .contact-form {
+    width: 100%;
+    max-width: 581px;
+    margin: 0 auto;
+    padding: 0 15px;
+    //form-group
+    .form-group {
+      margin-bottom: 16px;
+      font-size: 0;
+      @include full-width;
+
+      //textarea
+      textarea.form-control {
+        height: 97px;
+        resize: none;
+        width: 100%;
+        padding-top: 10px;
+      }
+
+      //form-control
+      .form-control {
+        display: block;
+        height: 49px;
+        padding-left: 22px;
+        padding-right: 22px;
+        font-size: 17.6px;
+        @include cabin(bold);
+        line-height: 1.2;
+        color: $gray;
+        background-color: $white;
+        background-clip: padding-box;
+        border-radius: 0;
+        border: none;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        @include mq(max, 479) {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+        @include mq(max, 360) {
+          font-size: 15px;
+        }
+      }
+
+      //select
+      select {
+        background-color: $yello-bg;
+        height: 49px;
+        width: 100%;
+        max-width: 386px;
+        font-size: 17.6px;
+        border: none;
+        border-radius: 0;
+        @include cabin(bold);
+        padding-left: 22px;
+        background-image: url("#{$imageUrl}/select-arrow.png");
+        background-repeat: no-repeat;
+        background-position: 95%;
+        background-size: auto;
+        margin-bottom: 25px;
+        @include mq(max, 767){
+          max-width: inherit;
+        }
+        @include mq(max, 360) {
+          padding-right: 54px;
+          font-size: 15px;
+        }
+      }
+
+
+      //label
+      label {
+        font-size: 17.6px;
+        @include cabin(bold);
+        color: $white;
+        padding-right: 11px;
+        @include mq(max, 767){
+        text-align: left;
+          width: 100%;
+        }
+        @include mq(max, 360){
+          font-size: 15px;
+        }
+      }
+
+      &.select-space {
+        padding-top: 17px;
+      }
+
+      &.valider {
+        padding-top: 20px;
+      }
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $gray;
+    }
+
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: $gray;
+    }
+
+    :-ms-input-placeholder { /* IE 10+ */
+      color: $gray;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+      color: $gray;
+    }
+  }
+}
+
+//valider-button
+.valider-button {
+  @include full-width;
+  button {
+    margin-top: 16px;
+    letter-spacing: 1px;
+  }
+}
+
+//yello-box
+.yello-box {
+  position: relative;
+  max-width: 641px !important;
+  //form-group
+  .form-group {
+    counter-increment: item;
+    position: relative;
+    padding-left: 60px;
+    @include mq(max, 319) {
+      padding-left: 50px;
+    }
+
+    &:before {
+      left: 0px;
+      font-size: 22.4px;
+      @include cabin(bold);
+      font-style: italic;
+      margin-right: 10px;
+      content: counter(item) ".";
+      color: #492e88;
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      width: 47px;
+      background: #ffea59;
+      height: 47px;
+      border-radius: 100%;
+      line-height: 47px;
+      @include mq(max, 319) {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+//bottom-bg
+.bottom-bg {
+  background-color: $navy-color;
+  padding: 32px 0;
+  @include full-width;
+}

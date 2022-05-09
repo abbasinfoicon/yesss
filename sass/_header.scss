@@ -1,0 +1,35 @@
+//header-area
+.header-area {
+  @include full-width;
+  background-color: $white;
+}
+
+// header-contact
+.header-contact {
+  @include full-width;
+  background-color: $drkyello-bg;
+  padding: 10px 0;
+  min-height: 45px;
+}
+
+// header-wrap
+.header-wrap{
+  width: 100%;
+  float: left;
+}
+
+// header-wrapper
+.header-wrapper{
+  @include full-width;
+  padding: 8.5px 0;
+  @include custom-max(767){
+    text-align: center;
+  }
+
+  // logo-top
+  .logo-top{
+    img{
+      width: 95px;
+    }
+  }
+}

@@ -1,0 +1,649 @@
+// page-banner
+.page-banner {
+  @include full-width;
+  text-align: center;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: $navy-color;
+  // contact-bg
+  &.contact-bg {
+    @include mq(max, 991) {
+      background-position: top left;
+    }
+  }
+
+  // decouvrez-banner
+  &.decouvrez-banner {
+    margin: 10px 0;
+    .verticle-block {
+      @include mq(min, 992) {
+        height: 430px;
+      }
+    }
+  }
+
+  // verticle-block
+  .verticle-block {
+    height: 294px;
+    padding: 40px 0;
+  }
+
+  // span
+  span {
+    text-transform: uppercase;
+    font-size: 46.55px;
+    background-color: $yello-bg;
+    color: $navy-color;
+    display: inline-block;
+    margin-bottom: 7px;
+    @include cabin('bold');
+    line-height: 1.1;
+    letter-spacing: 1.2px;
+    font-style: italic;
+    padding: 0 24px;
+    @include custom-max(479) {
+      padding: 4px 15px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @include custom-max(991) {
+      font-size: 36px;
+    }
+    @include custom-max(767) {
+      font-size: 34px;
+    }
+    @include custom-max(479) {
+      font-size: 30px;
+    }
+    @include custom-max(400) {
+      font-size: 26px;
+    }
+  }
+
+  //home-banner
+  &.home-banner {
+    .verticle-block {
+      height: calc(100vh - 145px); //height: 876px;
+      padding: 40px 0;
+
+      @include mq(max, 1366){
+        height: 700px;
+      }
+    }
+
+
+    span {
+      font-size: 77.59px;
+      line-height: 1.15;
+      letter-spacing: 2px;
+
+      @include custom-max(991) {
+        font-size: 46px;
+      }
+      @include custom-max(767) {
+        font-size: 34px;
+      }
+      @include custom-max(479) {
+        font-size: 30px;
+      }
+      @include custom-max(400) {
+        font-size: 26px;
+      }
+
+      &:last-child {
+        margin-bottom: 38px;
+      }
+    }
+
+    .container-span {
+      margin-bottom: 50px;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+
+      span {
+        text-transform: none;
+        font-size: 24.8px;
+        background-color: $navy-color;
+        color: $white;
+        display: inline-block;
+        margin-bottom: 0;
+        @include cabin('normal');
+        line-height: 1.4;
+        letter-spacing: 0.5px;
+        font-style: italic;
+        padding: 0 24px;
+        @include custom-max(479) {
+          padding: 4px 15px;
+        }
+
+        @include custom-max(991) {
+          font-size: 24px;
+        }
+        @include custom-max(767) {
+          font-size: 20px;
+        }
+        @include custom-max(479) {
+          font-size: 18px;
+        }
+        @include custom-max(400) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .btn-site {
+      font-size: 32px;
+      max-width: 255px;
+
+      @include custom-max(991){
+        font-size: 22px;
+        padding: 12px 6px;
+      }
+      @include custom-max(767){
+        font-size: 18px;
+      }
+      @include custom-max(479){
+        font-size: 16px;
+      }
+      @include custom-max(400){
+        font-size: 14px;
+      }
+    }
+  }
+
+  &.page-recherche{
+    .verticle-block{
+      height: 430px;
+    }
+  }
+}
+
+//dernieres-img
+.dernieres-img {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  position: relative;
+  background: $white;
+  @include box-shadow(0 0 20px rgba(0, 0, 0, 0.15));
+  @include border-radius(8px);
+
+  img{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin: 0 auto;
+
+    @include mq(max, 767){
+      width: 100%;
+    }
+  }
+
+  .dernieres-hover{
+    text-align: left;
+    padding: 0 24px 26px;
+    @include cabin(bold);
+
+    p{
+      color: #565656;
+      font-size: 14.4px;
+      margin-bottom: 15px;
+      font-style: normal;
+      line-height: 1.8;
+
+      @include mq(min, 1366){
+        min-height: 100px;
+      }
+    }
+
+    .btn-dernieres{
+      font-size: 15px;
+      display: block;
+      margin: 0 auto;
+      background: $navy-color;
+      color: $white;
+      padding: 14px 15px;
+    }
+
+    h3{
+      color: $blueclr;
+      @include cabin('bold');
+      letter-spacing: 0.9px;
+      position: relative;
+      padding-left: 26px;
+      font-style: italic;
+
+      &:before{
+        content: '';
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        background: $navy-color;
+        border-radius: 100%;
+        top: 9px;
+        left: 3px;
+      }
+    }
+  }
+
+
+
+  @include mq(max, 767){
+    margin: 0 auto 30px;
+    display: inline-block;
+  }
+}
+
+
+// garantie-paragraph
+.garantie-paragraph {
+  font-size: 24px;
+  line-height: 1.2;
+  color: $navy-color;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 807px;
+  letter-spacing: 0.6px;
+  @include custom-max(767) {
+    font-size: 22px;
+  }
+  @include custom-max(479) {
+    font-size: 20px;
+  }
+  @include custom-max(400) {
+    font-size: 18px;
+  }
+
+  // uneavez
+  &.uneavez{
+    max-width: 840px;
+  }
+}
+
+// notre-constat
+.notre-constat, .definissez-besoins {
+  padding: 72px 0;
+
+  @include custom-max(767) {
+    padding: 64px 0;
+  }
+}
+
+//marginBottom
+.marginBottom{
+  padding: 72px 0 42px;
+
+  @include custom-max(767) {
+    padding: 64px 0 34px;
+  }
+}
+
+// notre-constat
+.notre-constat {
+  @include full-width;
+  text-align: center;
+  @include cabin('bold');
+  font-style: italic;
+  background-color: $white;
+
+  // garantie-section
+  .garantie-section {
+    margin-bottom: 44px;
+    @include custom-max(767) {
+      margin-bottom: 40px;
+    }
+
+    // h2
+    h2 {
+      margin-top: -10px;
+      @include custom-max(767) {
+        margin-top: -7px;
+      }
+      @include custom-max(479) {
+        margin-top: -5px;
+      }
+    }
+
+    p {
+      color: $navy-color;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &.des-dispositifs {
+    @include full-width;
+    background-color: #f9f9f9;
+
+  }
+}
+
+// roundshadow-wrap
+.roundshadow-wrap {
+  @include full-width;
+
+  &:hover {
+    img {
+      @include transform(scale(1.02));
+    }
+  }
+
+  // img
+  img {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+  }
+}
+
+// mb-24
+.mb-24 {
+  @include custom-max(991) {
+    margin-bottom: 30px;
+  }
+}
+
+// definissez-besoins
+.definissez-besoins {
+  @include full-width;
+  background-color: #f9f9f9;
+  @include mq(min, 1200) {
+    .row {
+      margin: 0 -25px;
+    }
+    .col-md-6 {
+      padding: 0 25px;
+    }
+  }
+
+  // col-md-6
+  .col-md-6 {
+    @include custom-max(991) {
+      width: 100%;
+      float: left;
+    }
+  }
+
+  // definissez-wrap
+  .definissez-wrap {
+    width: 100%;
+    float: left;
+    margin-bottom: 42px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    // sm-heading
+    .sm-heading {
+      margin-bottom: 14px;
+    }
+  }
+
+  // button-col
+  .button-col {
+    padding-top: 50px;
+    @include custom-max(767) {
+      padding-top: 44px;
+    }
+    @include custom-max(479) {
+      padding-top: 38px;
+    }
+  }
+
+  // garantie-section
+  .garantie-section {
+    margin-bottom: 33px;
+    @include custom-max(991) {
+      margin-bottom: 26px;
+    }
+    @include custom-max(767) {
+      margin-bottom: 22px;
+    }
+    @include custom-max(479) {
+      margin-bottom: 18px;
+    }
+
+    // h2
+    h2 {
+      margin-top: -9px;
+      margin-bottom: 9px;
+      @include mq(min, 1200) {
+        padding-right: 138px;
+      }
+      // nospace-right
+      &.nospace-right{
+        padding-right: 0;
+      }
+    }
+  }
+
+  // pinksite-color
+  ol li, .pinksite-color, p {
+    @include cabin('bold');
+    font-size: 14.4px;
+  }
+
+  // garantie-list
+  ol.garantie-list li {
+    padding-left: 24px;
+    &:before {
+      content: '';
+      background-image: url("#{$imageUrl}/ticlist.png");
+      background-position: top left;
+      width: 18px;
+      height: 15px;
+      top: 4px;
+    }
+  }
+
+  // li
+  ol li {
+    margin-bottom: 15px;
+    padding-left: 19px;
+    padding-top: 2px;
+    line-height: 1.4;
+    counter-increment: item;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &:before {
+      font-size: 17px;
+      content: counter(item) '.';
+      color: $navy-color;
+      text-align: center;
+      display: inline-block;
+      font-style: italic;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    @include custom-max(767) {
+      margin-bottom: 9px;
+    }
+    @include custom-max(479) {
+      margin-bottom: 7px;
+    }
+    @include custom-max(400) {
+      margin-bottom: 5px;
+    }
+  }
+
+  // li,p
+  ol li, p {
+    position: relative;
+    list-style-type: none;
+    color: #565656;
+  }
+
+  // p
+  p {
+    margin-top: -7px;
+    width: 100%;
+    float: left;
+    margin-bottom: 26px;
+  }
+
+  // pinksite-color
+  p.pinksite-color {
+    color: $pinkclr;
+    margin: 0;
+  }
+
+  // ol
+  ol {
+    width: 100%;
+    float: left;
+    counter-reset: item;
+    padding: 0;
+    margin: 0;
+    @include mq(min, 1200) {
+      padding-right: 125px;
+    }
+  }
+}
+
+// img-roundshadow
+.img-roundshadow {
+  width: 100%;
+  @include box-shadow(0 0 20px rgba(0, 0, 0, 0.15));
+  @include border-radius(8px);
+}
+
+//brand-business
+.brand-business {
+  background: $white;
+  @include box-shadow(0 0 20px rgba(0, 0, 0, 0.15));
+  @include border-radius(8px);
+  padding: 15px;
+  @include mq(min, 1366){
+    padding: 15px 24px;
+    margin-top: 28px;
+  }
+  @include mq(min,992){
+    min-height: 277px;
+  }
+  @include mq(max, 991){
+    margin-bottom: 15px;
+  }
+
+  img{
+    opacity: 0;
+  }
+
+  h3 {
+    color: $navy-color;
+    @include cabin('bold');
+    font-style: italic;
+    letter-spacing: 0.9px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    position: relative;
+    list-style-type: none;
+    color: #565656;
+    @include cabin('bold');
+    font-size: 14.4px;
+    line-height: 1.6;
+    margin-bottom: 7px;
+  }
+}
+
+//page-recherche
+.page-recherche{
+  .container-span{
+    font-size: 33.6px;
+    text-transform: none;
+    background-color: $navy-color;
+    color: $white;
+    display: inline-block;
+    @include cabin('normal');
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    font-style: italic;
+    padding: 0 24px;
+    margin-bottom: 30px;
+
+    @include custom-max(479) {
+      padding: 4px 15px;
+    }
+
+    @include custom-max(991) {
+      font-size: 30px;
+    }
+    @include custom-max(767) {
+      font-size: 24px;
+    }
+    @include custom-max(479) {
+      font-size: 20px;
+    }
+    @include custom-max(400) {
+      font-size: 18px;
+    }
+  }
+
+  //button-col
+  .button-col{
+    margin-top: 30px;
+  }
+}
+
+// court-col
+.court-col {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 218px;
+
+  &:before, &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// sm-gray-court
+.sm-gray-court {
+  @include cabin('bold');
+  font-size: 14.4px;
+  color: #565656;
+  display: block;
+  margin-top: 10px;
+  line-height: 1.7;
+  br {
+    @include mq(max, 991) {
+      display: none;
+    }
+  }
+}
+
+// court-terme
+.notre-constat.court-terme {
+  // container
+  .container{
+    @include mq(min, 1065) {
+      width: 1035px;
+    }
+  }
+
+  // col-sm-4
+  .col-sm-4 {
+    @include mobile-lg {
+      margin-bottom: 40px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
